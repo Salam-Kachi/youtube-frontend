@@ -28,8 +28,17 @@
     <title>youtube-frontend</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container">
+        <button
+          class="btn btn-primary me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <i class="bi bi-list"></i>
+        </button>
         <a class="navbar-brand" href="#">
           يوتيوبي
           <span class="video-icon px-1 mx-1">
@@ -50,15 +59,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="#suggested-videos"
                 >الفديوهات المقترحة</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">المرفوعة حديثا</a>
+              <a class="nav-link" href="#recent-videos">المرفوعة حديثا</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">الفديوهات الرائجة</a>
+              <a class="nav-link" href="#trending-videos">الفديوهات الرائجة</a>
             </li>
           </ul>
           <form class="d-flex" role="search" action="search-results.html">
@@ -70,13 +82,89 @@
             />
             <button class="btn btn-outline-success" type="submit">بحث</button>
           </form>
+          <a href="login.html" class="nav-link login ps-3">تسجيل الدخول</a>
         </div>
       </div>
     </nav>
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">القائمة</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <div class="list-group list-group-flush w-100">
+          <a href="index.html" class="list-group-item list-group-item-action"
+            ><i class="bi bi-house-door-fill"></i> الصفحة الرئيسية</a
+          >
+          <a
+            href="index.html#suggested-videos"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-compass"></i> الفديوهات المقترحة</a
+          >
+
+          <a
+            href="index.html#recent-videos"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-plus-square"></i> المرفوعة حديثاً</a
+          >
+          <a
+            href="index.html#trending-videos"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-fire"></i> الفديوهات الرائجة</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-play-btn-fill"></i> فديوهاتي</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-clock-history"></i> سجل المشاهدة</a
+          >
+          <a
+            href="history-log.html"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-collection-play"></i> الاشتراكات</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-film"></i> الافلام والعروض</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-controller"></i> ألعاب الفديو</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-handbag"></i> الموضة والجمال</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-mortarboard"></i> محتوى تعليمي</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-gear-fill"></i>الاعدادات</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-question-circle-fill"></i>المساعدة</a
+          >
+          <a
+            href="https://academy.hsoub.com"
+            class="list-group-item list-group-item-action small text-muted"
+            >دورة تطوير واجهات المستخدم <br />اكاديمية حسوب 2026</a
+          >
+        </div>
+      </div>
+    </div>
 
     <div class="container">
-      <div class="row">
-        <h4 class="my-4">الفديوهات المقترحة</h4>
+      <div class="row" id="suggested-videos">
+        <div class="mt-5 mb-4">
+          <h4 class="my-4">الفديوهات المقترحة</h4>
+        </div>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12">
@@ -213,7 +301,7 @@
             <div class="card-footer">
               <small class="card-muted">
                 <span class="d-block">3 الاف مشاهدة</span>
-                <span class="d-block">قبل 5اشهر</span>
+                <span class="d-block">قبل 5 اشهر</span>
               </small>
             </div>
             <a href="channel.html">
@@ -258,7 +346,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="recent-videos">
         <h4 class="my-4">المرفوعة حديثاً</h4>
       </div>
       <div class="row">
@@ -266,7 +354,9 @@
           <figure class="ratio ratio-16x9">
             <img src="/img/thumbnail/restful.jpg" class="img-fluid rounded" />
             <a href="watch.html" class="stretched-link"></a>
-            <div class="video-overlay position-absolute start-0top-0 end-0 p-2">
+            <div
+              class="video-overlay position-absolute start-0 top-0 end-0 p-2"
+            >
               <small class="badge bg-dark date">قبل يوم</small>
               <time class="badge bg-dark">7:20</time>
             </div>
@@ -276,7 +366,7 @@
               >شرح فلسفة RESTful - 2026</a
             >
             <small class="d-block text-muted"
-              >قناة: <a href="chnnel.com">أكاديمية حسوب</a> . 4,500
+              >قناة: <a href="channel.html">أكاديمية حسوب</a> . 4,500
               مشاهدة</small
             >
           </figcaption>
@@ -285,7 +375,9 @@
           <figure class="ratio ratio-16x9">
             <img src="/img/thumbnail/khamsat1.png" class="img-fluid rounded" />
             <a href="watch.html" class="stretched-link"></a>
-            <div class="video-overlay position-absolute start-0top-0 end-0 p-2">
+            <div
+              class="video-overlay position-absolute start-0 top-0 end-0 p-2"
+            >
               <small class="badge bg-dark date">قبل يوم</small>
               <time class="badge bg-dark">7:20</time>
             </div>
@@ -295,7 +387,7 @@
               >تعلم كيف تقدم مهاراتك على موقع خمسات</a
             >
             <small class="d-block text-muted"
-              >قناة: <a href="chnnel.com">خمسات</a> . 2,500 مشاهدة</small
+              >قناة: <a href="channel.html">خمسات</a> . 2,500 مشاهدة</small
             >
           </figcaption>
         </div>
@@ -303,7 +395,9 @@
           <figure class="ratio ratio-16x9">
             <img src="/img/thumbnail/php.jpg" class="img-fluid rounded" />
             <a href="watch.html" class="stretched-link"></a>
-            <div class="video-overlay position-absolute start-0top-0 end-0 p-2">
+            <div
+              class="video-overlay position-absolute start-0 top-0 end-0 p-2"
+            >
               <small class="badge bg-dark date">قبل يوم</small>
               <time class="badge bg-dark">7:20</time>
             </div>
@@ -313,7 +407,7 @@
               >دورة تطوير تطبيقات الويب باستخدام PHP</a
             >
             <small class="d-block text-muted"
-              >قناة: <a href="chnnel.com">اكاديمية حسوب</a> . 8,500
+              >قناة: <a href="channel.html">اكاديمية حسوب</a> . 8,500
               مشاهدة</small
             >
           </figcaption>
@@ -322,7 +416,9 @@
           <figure class="ratio ratio-16x9">
             <img src="/img/thumbnail/mostaql1.jpg" class="img-fluid rounded" />
             <a href="watch.html" class="stretched-link"></a>
-            <div class="video-overlay position-absolute start-0top-0 end-0 p-2">
+            <div
+              class="video-overlay position-absolute start-0 top-0 end-0 p-2"
+            >
               <small class="badge bg-dark date">قبل يوم</small>
               <time class="badge bg-dark">7:20</time>
             </div>
@@ -332,12 +428,12 @@
               >تواصل مع أفضل المبدعين العرب - مستقل</a
             >
             <small class="d-block text-muted"
-              >قناة: <a href="chnnel.com">مستقل</a> . 8,200 مشاهدة</small
+              >قناة: <a href="channel.html">مستقل</a> . 8,200 مشاهدة</small
             >
           </figcaption>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="trending-videos">
         <h4 class="mb-4 mt-5">الفديوهات الرائجة</h4>
       </div>
       <div class="row">
@@ -448,7 +544,10 @@
             </div>
             <div class="tab-pane fade" id="list-trend3">
               <div class="ratio ratio-16x9 mb-3">
-                <img src="/img/thumbnail/khamsat2.jpg" class="img-fluid rounded" />
+                <img
+                  src="/img/thumbnail/khamsat2.jpg"
+                  class="img-fluid rounded"
+                />
                 <a href="watch.html" class="stretched-link"></a>
               </div>
               <h3>أفضل طريقة لربح الكثير من المال من موقع خمسات</h3>

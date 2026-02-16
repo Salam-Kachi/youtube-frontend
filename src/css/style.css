@@ -20,7 +20,7 @@ a {
   border-radius: 15% !important;
 }
 
-.nav-link:hover {
+.navbar .navbar-nav .nav-link:hover {
   color: white !important;
   background-color: #bf40bf !important;
 }
@@ -99,4 +99,23 @@ time {
     text-align: center;
     justify-content: center;
   }
+}
+
+.row {
+  scroll-margin-top: 56px;
+}
+
+.navbar .login {
+  color: #bf40bf !important;
+  font-weight: bold;
+}
+
+.navbar .login:hover {
+  background-color: #bf40bf !important;
+  color: white !important;
+  border-radius: 5px;
+}
+
+.offcanvas {
+  width: 250px !important;
 }
