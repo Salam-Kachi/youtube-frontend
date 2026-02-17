@@ -25,7 +25,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/css/style.css" />
-    <title>youtube-frontend</title>
+    <link rel="stylesheet" href="/src/css/watch.css" />
+    <title>يوتيوبي - صفحة المشاهدة</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -39,7 +40,7 @@
         >
           <i class="bi bi-list"></i>
         </button>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
           يوتيوبي
           <span class="video-icon px-1 mx-1">
             <i class="bi bi-play-btn"></i>
@@ -77,15 +78,8 @@
       id="offcanvasExample"
       aria-labelledby="offcanvasExampleLabel"
     >
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">القائمة</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
-      </div>
+      
+
       <div class="offcanvas-body p-0">
         <div class="list-group list-group-flush w-100">
           <a href="index.html" class="list-group-item list-group-item-action"
@@ -96,7 +90,6 @@
             class="list-group-item list-group-item-action"
             ><i class="bi bi-compass"></i> الفديوهات المقترحة</a
           >
-
           <a
             href="index.html#recent-videos"
             class="list-group-item list-group-item-action"
@@ -146,8 +139,8 @@
     </div>
 
     <div class="container">
-      <div class="mt-5 mb-2 inline-block"></div>
-      <div class="card border-0 mt-5">
+      <div class="mt-5 mb-2 d-inline-block"></div>
+      <div class="card border-0 mt-4">
         <div class="row">
           <div class="col-lg-7">
             <video
@@ -173,6 +166,16 @@
                             <span class="card-text ps-2">اكاديمية حسوب</span>
                         </a>
                     </small>
+                    <h4>دورة تطوير واجهات المستخدم - أكاديمية حسوب</h4>
+                    <P>تم إعداد هذه الدورة على يد نخبة من أفضل المبرمجين العرب بتسلسل بسيط وواضح، بإنهائك لها ستصبح مطوّر
+                      <span id="dots">...</span><span id="more" style="display: none;"> واجهات مستخدم دون الحاجة لامتلاك معرفة سابقة بالبرمجة، خلال هذه ستتعلم تطوير واجهات المستخدم خطوة بخطوة اعتمادًا على التجربة العملية والمادة العلمية التي يقدمها مدربون محترفون.</span></P>
+                      <button class="btn btn-primary-outline mb-4" id="myBtn">عرض المزيد</button>
+                      <div>
+                        <i class="bi bi-heart fs-3 p-1" title="احببته"></i>
+                        <i class="bi bi-clock fs-3 p-1" title="المشاهدة لاحقا"></i>
+                        <i class="bi bi-share fs-3 p-1" title="مشاركة"></i>
+                        <i class="bi bi-bookmark fs-3 p-1" title="اضافة الى قائمة التشغيل"></i>
+                      </div>
                </div>
           </div>
         </div>
