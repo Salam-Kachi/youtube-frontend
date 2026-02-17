@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-CfCrinSRH2IR6a4e6fy2q6ioOX7O6Mtm1L9vRvFZ1trBncWmMePhzvafv7oIcWiW"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <title>youtube-frontend</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container">
+        <button
+          class="btn btn-primary me-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <a class="navbar-brand" href="#">
+          يوتيوبي
+          <span class="video-icon px-1 mx-1">
+            <i class="bi bi-play-btn"></i>
+          </span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto"></ul>
+          <form class="d-flex" role="search" action="search-results.html">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="نص البحث ..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">بحث</button>
+          </form>
+          <a href="login.html" class="nav-link login ps-3">تسجيل الدخول</a>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">القائمة</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <div class="list-group list-group-flush w-100">
+          <a href="index.html" class="list-group-item list-group-item-action"
+            ><i class="bi bi-house-door-fill"></i> الصفحة الرئيسية</a
+          >
+          <a
+            href="index.html#suggested-videos"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-compass"></i> الفديوهات المقترحة</a
+          >
+
+          <a
+            href="index.html#recent-videos"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-plus-square"></i> المرفوعة حديثاً</a
+          >
+          <a
+            href="index.html#trending-videos"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-fire"></i> الفديوهات الرائجة</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-play-btn-fill"></i> فديوهاتي</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-clock-history"></i> سجل المشاهدة</a
+          >
+          <a
+            href="history-log.html"
+            class="list-group-item list-group-item-action"
+            ><i class="bi bi-collection-play"></i> الاشتراكات</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-film"></i> الافلام والعروض</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-controller"></i> ألعاب الفديو</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-handbag"></i> الموضة والجمال</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-mortarboard"></i> محتوى تعليمي</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-gear-fill"></i>الاعدادات</a
+          >
+          <a href="#" class="list-group-item list-group-item-action"
+            ><i class="bi bi-question-circle-fill"></i>المساعدة</a
+          >
+          <a
+            href="https://academy.hsoub.com"
+            class="list-group-item list-group-item-action small text-muted"
+            >دورة تطوير واجهات المستخدم <br />&COPY; 2026 اكاديمية حسوب
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="mt-5 mb-2 inline-block"></div>
+      <div class="card border-0 mt-5">
+        <div class="row">
+          <div class="col-lg-7">
+            <video
+              controls
+              poster="img/poster.png"
+              muted
+              loop
+              class="w-100 p-0 align-middle"
+            >
+              <source src="/video/hsoub.webm" type="video/webm" />
+              <source src="/video/hsoub.mp4" type="video/mp4" />
+              <track src="/video/caption.vtt" kind="captions" srclang="ar" label="عربي"></track>
+              لا يدعم المتصفح الخاص بك عرض هذا الفيديو.
+            </video>
+          </div>
+          <div class="col-lg-5">
+               <div class="card-block px-3 py-2 p-lg-0">
+                    <small>
+                        <i class="bi bi-play-btn"></i><span>200 الف مشاهدة</span>
+                        <i class="bi bi-clock ps-2"></i><span>قبل 4 اشهر</span>
+                        <a href="channel.html" class="channel-image">
+                            <img src="/img/ch-logo.png" class="rounded my-2 ms-3 " width="30px"/>
+                            <span class="card-text ps-2">اكاديمية حسوب</span>
+                        </a>
+                    </small>
+               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
